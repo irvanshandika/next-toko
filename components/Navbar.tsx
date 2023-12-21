@@ -1,59 +1,64 @@
+/* eslint-disable react/jsx-key */
 "use client";
-import React, { useState } from "react";
 import Image from "next/image";
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, NavbarMenuToggle, NavbarMenu, NavbarMenuItem } from "@nextui-org/react";
+import React, { useState } from "react";
 import Logo from "@img/logo.ico";
 
-function NavigasiBar() {
+function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const menuItems = [
+
+  const toggleMobileMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const navItems = [
     {
-      label: "Home",
+      name: "Home",
       href: "/",
     },
     {
-      label: "Produk",
+      name: "Products",
       href: "#",
     },
     {
-      label: "Kontak",
+      name: "Contact",
       href: "#",
     },
   ];
-
   return (
     <>
-      <Navbar onMenuOpenChange={setIsMenuOpen} className="bg-[#F6D6D6] lg:p-2 p-1 lg:mb-4 mb-[100px]">
-        <NavbarContent>
-          <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} className="sm:hidden" />
-          <NavbarBrand>
-            <Link href="/">
-              <Image src={Logo} alt="Vercel Logo" className="lg:w-16 lg:h-16 w-12 h-12 rounded-full" priority />
-              <p className="font-bold text-inherit ml-2">MayBeauty.Skin</p>
-            </Link>
-          </NavbarBrand>
-        </NavbarContent>
-        <NavbarContent className="hidden sm:flex gap-4" justify="center">
-          {menuItems.map((item, index) => (
-            <NavbarItem key={`${item}-${index}`}>
-              <Link color={index === 2 ? "primary" : index === menuItems.length - 1 ? "danger" : "foreground"} className="w-full hover:text-blue-500" href={item.href} size="lg">
-                {item.label}
-              </Link>
-            </NavbarItem>
-          ))}
-        </NavbarContent>
-        <NavbarMenu className="bg-[#F6D6D6]">
-          {menuItems.map((item, index) => (
-            <NavbarMenuItem key={`${item}-${index}`}>
-              <Link color={index === 2 ? "primary" : index === menuItems.length - 1 ? "danger" : "foreground"} className="w-full hover:text-blue-500" href={item.href} size="lg">
-                {item.label}
-              </Link>
-            </NavbarMenuItem>
-          ))}
-        </NavbarMenu>
-      </Navbar>
+      <nav className="bg-[#FFC5C5] border-white">
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+          <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+            <Image src={Logo} alt="Vercel Logo" className="lg:w-14 lg:h-14 w-12 h-12 rounded-full" priority />
+            <p className="font-bold text-inherit ml-2">MayBeauty.Skin</p>
+          </a>
+          <button
+            data-collapse-toggle="navbar-default"
+            type="button"
+            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-[#FFD6D6] focus:outline-none focus:ring-2 focus:ring-gray-200"
+            onClick={toggleMobileMenu}
+            aria-expanded={isMenuOpen}>
+            <span className="sr-only">Open main menu</span>
+            <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15" />
+            </svg>
+          </button>
+          <div className={`${isMenuOpen ? "block" : "hidden"} w-full md:block md:w-auto`} id="navbar-default">
+            <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-[#FFC5C5] md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
+              {navItems.map((item, index) => (
+                <li key={`${item}-${index}`}>
+                  <a href={item.href} className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">
+                    {item.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </nav>
     </>
   );
 }
 
-export default NavigasiBar;
+export default Navbar;

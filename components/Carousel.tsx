@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import { Carousel } from "antd";
 
@@ -12,10 +13,10 @@ function CarouselComponents() {
 
   return (
     <>
-      <Carousel autoplay>
+      <Carousel autoplay className="mt-10">
         {slides.map((slide, index) => (
           <div key={index} className="flex items-center justify-center h-full">
-            <img src={slide} alt="carousel" className="w-96 mx-auto my-auto" />
+            <img src={slide} alt="carousel" className="w-96 lg:w-[500px] lg:h-[500px] mx-auto my-auto" />
           </div>
         ))}
       </Carousel>
