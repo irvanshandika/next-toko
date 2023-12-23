@@ -5,7 +5,7 @@ import Product from "@sections/Product";
 
 function Home() {
   return (
-    <div className="font-google-sans bg-[#F6D6D6] h-screen">
+    <div>
       <NavigasiBar />
       <CarouselComponents />
       <Product />
