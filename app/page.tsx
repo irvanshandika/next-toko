@@ -1,15 +1,15 @@
 import React from "react";
 import NavigasiBar from "@components/Navbar";
-import CarouselComponents from "@components/Carousel";
-import Product from "@sections/Product";
+import Footer from "@components/Footer";
+import HomeSection from "@sections/HomeSection";
 
 function Home() {
   return (
-    <div>
+    <>
       <NavigasiBar />
-      <CarouselComponents />
-      <Product />
-    </div>
+      <HomeSection />
+      <Footer />
+    </>
   );
 }
 
