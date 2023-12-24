@@ -1,30 +1,19 @@
 /* eslint-disable react/jsx-key */
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import Logo from "@img/logo.ico";
+import { CloseOutlined, MenuOutlined } from "@ant-design/icons";
+import { navbarItems } from "@data/navitems";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const items = useMemo(() => navbarItems, []);
+
   const toggleMobileMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-
-  const navItems = [
-    {
-      name: "Home",
-      href: "/",
-    },
-    {
-      name: "Products",
-      href: "#",
-    },
-    {
-      name: "Contact",
-      href: "#",
-    },
-  ];
   return (
     <>
       <nav className="bg-[#FFC5C5] border-white">
@@ -40,13 +29,11 @@ function Navbar() {
             onClick={toggleMobileMenu}
             aria-expanded={isMenuOpen}>
             <span className="sr-only">Open main menu</span>
-            <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-              <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15" />
-            </svg>
+            {isMenuOpen ? <CloseOutlined /> : <MenuOutlined />}
           </button>
           <div className={`${isMenuOpen ? "block" : "hidden"} w-full md:block md:w-auto`} id="navbar-default">
             <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-[#FFC5C5] md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
-              {navItems.map((item, index) => (
+              {items.map((item, index) => (
                 <li key={`${item}-${index}`}>
                   <a href={item.href} className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">
                     {item.name}
