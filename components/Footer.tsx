@@ -25,13 +25,18 @@ function Footer() {
                 <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">Resources</h2>
                 <ul className="text-black font-medium">
                   <li className="mb-4">
-                    <a href="https://flowbite.com/" className="hover:underline">
-                      Flowbite
+                    <a href="https://ant.design/" className="hover:underline" target="_blank">
+                      Ant Design
                     </a>
                   </li>
                   <li>
-                    <a href="https://tailwindcss.com/" className="hover:underline">
+                    <a href="https://tailwindcss.com/" className="hover:underline" target="_blank">
                       Tailwind CSS
+                    </a>
+                  </li>
+                  <li className="mt-4">
+                    <a href="https://nextui.org/" className="hover:underline" target="_blank">
+                      Next UI
                     </a>
                   </li>
                 </ul>
@@ -40,12 +45,12 @@ function Footer() {
                 <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">Follow us</h2>
                 <ul className="text-black font-medium">
                   <li className="mb-4">
-                    <Link href="#" className="hover:underline" target="_blank">
+                    <Link href="https://www.instagram.com/maybeauty.skin/" className="hover:underline" target="_blank">
                       Instagram
                     </Link>
                   </li>
                   <li>
-                    <Link href="https://discord.gg/4eeurUVvTy" className="hover:underline">
+                    <Link href="https://discord.gg/4eeurUVvTy" className="hover:underline" target="_blank">
                       TikTok
                     </Link>
                   </li>
@@ -55,12 +60,12 @@ function Footer() {
                 <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">Legal</h2>
                 <ul className="text-black font-medium">
                   <li className="mb-4">
-                    <a href="#" className="hover:underline">
+                    <a href="#" className="hover:underline" target="_blank">
                       Privacy Policy
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="hover:underline">
+                    <a href="#" className="hover:underline" target="_blank">
                       Terms &amp; Conditions
                     </a>
                   </li>
