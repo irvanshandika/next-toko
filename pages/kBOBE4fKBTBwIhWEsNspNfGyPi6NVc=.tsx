@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable react/jsx-key */
 "use client";
@@ -7,9 +8,12 @@ import { useRouter } from "next/navigation";
 import { Card, CardHeader, CardBody, CardFooter, Button, Image, useDisclosure, Modal, ModalHeader, ModalBody, ModalFooter, ModalContent, Link } from "@nextui-org/react";
 import MaterialSymbolsShoppingCartSharp from "@icons/MaterialSymbolsShoppingCartSharp";
 import EpInfoFilled from "@icons/EpInfoFilled";
+import { Carousel } from "antd";
+import { PaketKecantikanCarousel } from "@data/ProductCarousel";
 
 function PaketKecantikan() {
   const items = useMemo(() => ProdukPaketKecantikan, []);
+  const itemsCarousel = useMemo(() => PaketKecantikanCarousel, []);
   const router = useRouter();
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
@@ -36,6 +40,13 @@ function PaketKecantikan() {
                         <>
                           <ModalHeader className="flex flex-col gap-1">{item.title}</ModalHeader>
                           <ModalBody>
+                            <Carousel autoplay className="my-10">
+                              {itemsCarousel.map((item, index) => (
+                                <div key={index} className="flex items-center justify-center h-full">
+                                  <img src={item} alt="carousel" className="w-[300px] lg:w-[300px] lg:h-[300px] mx-auto my-auto rounded-md" />
+                                </div>
+                              ))}
+                            </Carousel>
                             <p>{item.deskripsi1}</p>
                             <p>{item.deskripsi2}</p>
                           </ModalBody>
@@ -44,7 +55,7 @@ function PaketKecantikan() {
                               Close
                             </Button>
                             <Link href={item.url} target="_blank" className="bg-[#F2BED1] hover:bg-[#FDCEDF] px-4 py-2 rounded-md mr-2 text-black">
-                              Beli Sekarang
+                              Beli Sekarang <span className="ml-1">{<MaterialSymbolsShoppingCartSharp />}</span>
                             </Link>
                           </ModalFooter>
                         </>
