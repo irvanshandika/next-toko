@@ -5,18 +5,21 @@ export const ProdukAwal = [
     title: "Parfum",
     image: "https://cf.shopee.co.id/file/fd11907f0c04d1e254effeffd1b64ab4",
     url: "/pages/parfum",
+    alt: "parfum",
   },
   {
     id: 2,
     title: "Paket Kecantikan",
     image: "https://cf.shopee.co.id/file/dc3e8275d7ddacd9cb928ba290437119_tn",
     url: "/pages/paket-kecantikan",
+    alt: "paket kecantikan",
   },
   {
     id: 3,
     title: "Perawatan Wajah",
     image: "https://projektoko.vercel.app/assets/images/sheetmask.jpg",
     url: "/pages/perawatan-wajah",
+    alt: "perawatan wajah",
   },
 ];
 
@@ -37,24 +40,23 @@ export const ProdukPaketKecantikan = [
 export const ProdukParfum = [
   {
     id: 1,
-    title: "",
-    harga: "",
+    title: "[SUPER PREMIUM] Inspired Parfum BS Bodymist 30ml",
+    harga: "9.000",
     deskripsi: [
-      "",
+      "[SUPER PREMIUM] Inspired Parfum BS Bodymist 30ml adalah produk yang cocok untuk Anda yang ingin tampil percaya diri, segar, dan wangi sepanjang hari.",
+      "Produk ini juga bisa menjadi hadiah yang sempurna untuk orang-orang terdekat Anda. Dapatkan sekarang juga di Shopee dengan harga Rp9.000 saja",
     ],
-    image: "",
-    url:""
-  }
-]
+    image: "https://down-id.img.susercontent.com/file/id-11134207-7r990-lmr9pwceva5g4a",
+    url: "https://shopee.co.id/-SUPER-PREMIUM-Inspired-Parfum-BS-Bodymist-30ml-i.296344657.23357633182?sp_atk=7cd3fa92-31da-407d-b521-693bf0bd1954&xptdk=7cd3fa92-31da-407d-b521-693bf0bd1954",
+  },
+];
 export const ProdukPerawatanWajah = [
   {
     id: 1,
     title: "",
     harga: "",
-    deskripsi: [
-      "",
-    ],
+    deskripsi: [""],
     image: "",
-    url:""
-  }
-]
+    url: "",
+  },
+];

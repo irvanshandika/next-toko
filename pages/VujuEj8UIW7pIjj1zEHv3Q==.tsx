@@ -36,15 +36,21 @@ function Parfum() {
                         <>
                           <ModalHeader className="flex flex-col gap-1">
                             <Carousel autoplay className="my-10">
-                              {itemsCarousel.map((item, index) => (
-                                <div key={index} className="flex items-center justify-center h-full">
-                                  <Image src={item} alt="carousel" className="w-[230px] h-[230px] lg:w-[300px] lg:h-[300px] mx-auto my-auto rounded-md" />
+                              {itemsCarousel.map((item) => (
+                                <div key={item.id} className="flex items-center justify-center h-full">
+                                  <div className="flex items-center justify-center">
+                                    <Image src={item.images} alt="carousel" className="w-[230px] h-[230px] lg:w-[240px] lg:h-[240px] mx-auto my-auto rounded-md" />
+                                  </div>
                                 </div>
                               ))}
                             </Carousel>
                           </ModalHeader>
+
                           <ModalBody>
                             <h1 className="font-bold">{item.title}</h1>
+                            <p>
+                              Rp. <span className="text-red-500 font-bold">{item.harga}</span>
+                            </p>
                             <p>{item.deskripsi}</p>
                           </ModalBody>
                           <ModalFooter>

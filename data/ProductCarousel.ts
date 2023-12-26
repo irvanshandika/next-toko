@@ -6,8 +6,26 @@ export const PaketKecantikanCarousel = [
 ];
 
 export const ParfumCarousel = [
-  
-]
-export const PerawatanWajahCarousel = [
+  {
+    id: 1,
+    images: "https://down-id.img.susercontent.com/file/id-11134207-7r990-lmr9pwceva5g4a"
+  },
+  {
+    id: 2,
+    images: "https://down-id.img.susercontent.com/file/id-11134207-7r991-lmr9pwcewopwf8"
+  },
+  {
+    id: 3,
+    images: "https://down-id.img.susercontent.com/file/id-11134207-7r992-lmr9pwcey3ace7"
+  },
+  {
+    id: 4,
+    images: "https://down-id.img.susercontent.com/file/id-11134207-7r98w-lmr9pwcezhus0a"
+  },
+  {
+    id: 5,
+    images: "https://down-id.img.susercontent.com/file/id-11134207-7r990-lmrac7ml1sf8b2"
+  },
+];
 
-]
+export const PerawatanWajahCarousel = [];
