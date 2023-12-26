@@ -25,9 +25,36 @@ export const ProdukPaketKecantikan = [
     id: 1,
     title: "100% ORIGINAL PIXY PAKET LIPTINT DAN BLUSH ON",
     harga: "Rp 15.000",
-    deskripsi1: "Siapa bilang makeup harus mahal dan ribet? Dengan PIXY PAKET LIPTINT DAN BLUSH ON, Anda bisa tampil cantik dan segar dengan mudah dan hemat.",
-    deskripsi2: "Paket ini berisi dua produk multifungsi yang bisa Anda gunakan untuk bibir, pipi, dan mata.",
+    deskripsi: [
+      "Siapa bilang makeup harus mahal dan ribet? Dengan PIXY PAKET LIPTINT DAN BLUSH ON, Anda bisa tampil cantik dan segar dengan mudah dan hemat.",
+      "Paket ini berisi dua produk multifungsi yang bisa Anda gunakan untuk bibir, pipi, dan mata.",
+    ],
     image: "https://down-id.img.susercontent.com/file/id-11134207-7r98p-ln9mq5s2fg3l61",
     url: "https://shopee.co.id/100-ORIGINAL-PIXY-PAKET-LIPTINT-DAN-BLUSH-ON-i.296344657.22284530314?xptdk=1ccfa558-da53-4a54-b345-306804896356",
   },
 ];
+
+export const ProdukParfum = [
+  {
+    id: 1,
+    title: "",
+    harga: "",
+    deskripsi: [
+      "",
+    ],
+    image: "",
+    url:""
+  }
+]
+export const ProdukPerawatanWajah = [
+  {
+    id: 1,
+    title: "",
+    harga: "",
+    deskripsi: [
+      "",
+    ],
+    image: "",
+    url:""
+  }
+]

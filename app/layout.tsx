@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    template: "May Beauty Skin",
+    template: "%s | May Beauty Skin",
     default: "May Beauty Skin",
   },
   description: "Tempatnya Jual Skin Care",
